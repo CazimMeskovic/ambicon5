@@ -1,0 +1,40 @@
+.overflow-visible {
+    overflow: visible
+}
+
+.box-newsletter {
+    @apply rounded-[18px] p-[52px] px-[74px];
+}
+
+.box-newsletter form,
+.box-form-newsletter form {
+    @apply flex items-center;
+}
+
+.input-newsletter::placeholder {
+    @apply font-sans font-normal text-base leading-[28px] text-gray-400;
+}
+
+.input-newsletter:-ms-input-placeholder {
+    @apply font-sans font-normal text-base leading-[28px] text-gray-400;
+}
+
+.input-newsletter::-ms-input-placeholder {
+    @apply font-sans font-normal text-base leading-[28px] text-gray-400;
+}
+
+.input-newsletter::-webkit-input-placeholder {
+    @apply font-sans font-normal text-base leading-[28px] text-gray-400;
+}
+
+.box-newsletter {
+    @apply rounded-[18px] p-[52px] px-[74px];
+}
+
+.box-form-newsletter {
+    @apply bg-white max-w-[500px] p-[11px] px-[12px] rounded-[55px];
+}
+
+.input-newsletter {
+    @apply max-w-[90%] p-[15px] border-0 min-h-[50px] font-sans font-normal text-base leading-[28px] text-gray-400;
+}

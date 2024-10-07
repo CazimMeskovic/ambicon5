@@ -1,0 +1,85 @@
+.container {
+	padding: 35px;
+	min-width: 300px;
+	border: 1px solid #101828;
+	border-radius: 5px;
+	background-color: white;
+
+	@media screen and (max-width: 768px) {
+		max-width: 1px;
+		padding: 20px;
+		margin: 0 12px;
+	}
+}
+
+.price {
+	font-family: "Chivo";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 38px;
+	color: #101828;
+	padding-bottom: 20px;
+}
+
+.headline {
+	font-family: "Chivo";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 24px;
+	color: #101828;
+	padding-bottom: 9px;
+}
+
+.subheadline {
+	font-family: "Noto Sans";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 16px;
+	color: #98a2b3;
+	max-width: 70%;
+}
+
+.divider {
+	background: #d0d5dd;
+	height: 1px;
+	margin: 40px 0 20px 0;
+}
+
+.list {
+	padding-bottom: 70px;
+}
+
+.listItem {
+	padding: 6px 0;
+	span {
+		font-family: "Noto Sans";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 19px;
+		margin-left: 8px;
+		color: #667085;
+	}
+}
+
+.button {
+	width: 100%;
+	background-color: #101828;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 18px 20px;
+	border: 2px solid #101828;
+	border-radius: 6px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.button:hover {
+	background-color: #fff;
+	color: #101828;
+	border-color: #101828;
+}

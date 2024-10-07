@@ -1,0 +1,42 @@
+{
+	"kontakt": {
+		"de": "kontakt",
+		"en": "contact",
+		"bs": "kontakt"
+	},
+	"impressum": {
+		"de": "impressum",
+		"en": "imprint",
+		"bs": "impresum"
+	},
+	"digitale-buchhaltung": {
+		"de": "digitale-buchhaltung",
+		"en": "accounting",
+		"bs": "digitalno-knjigovodstvo"
+	},
+	"ueber-uns": {
+		"de": "ueber-uns",
+		"en": "about-us",
+		"bs": "o-nama"
+	},
+	"unternehmensberatung": {
+		"de": "unternehmensberatung",
+		"en": "management-consultancy",
+		"bs": "konsalting"
+	},
+	"personalverrechnung": {
+		"de": "personalverrechnung",
+		"en": "payroll",
+		"bs": "obracun-plata"
+	},
+	"jahresabschluss": {
+		"de": "jahresabschluss",
+		"en": "annual-financial-statements",
+		"bs": "financijski-izvjestaji"
+	},
+	"datenschutzerklaerung": {
+		"de": "datenschutzerklaerung",
+		"en": "privacy-policy",
+		"bs": "politika-privatnosti"
+	}
+}

@@ -1,0 +1,94 @@
+import { NextResponse } from "next/server";
+import { Job } from "../../types/job"; // prilagodi putanju
+import { News } from "../../../types/news"; // prilagodi putanju
+import { getAllJobs, getAllPosts } from "../../../util/api"; // prilagodi putanju
+import routes from "../_routes.json"; // prilagodi putanju
+
+interface SitemapageItem {
+  url: string;
+  priority: number;
+  de?: string;
+  en?: string;
+  bs?: string;
+}
+
+function generateSiteMap(pages: SitemapageItem[]) {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+  <urlset
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+    http://www.w3.org/1999/xhtml http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    ${pages
+      .map(({ url, priority, de, en, bs }) => {
+        return `
+    <url>
+      <loc>https://www.ambicon.at${url}</loc>
+      <priority>${priority}</priority>
+      <changefreq>weekly</changefreq>
+      ${de ? `<xhtml:link rel="alternate" hreflang="de" href="https://www.ambicon.at${de}" />` : ""}
+      ${en ? `<xhtml:link rel="alternate" hreflang="en" href="https://www.ambicon.at${en}" />` : ""}
+      ${bs ? `<xhtml:link rel="alternate" hreflang="bs" href="https://www.ambicon.at${bs}" />` : ""}
+      <lastmod>${new Date().toISOString()}</lastmod>
+    </url>
+  `;
+      })
+      .join("")}
+  </urlset>
+  `;  
+}
+
+export async function GET() {
+  const allPosts: { edges: News[] } = await getAllPosts();
+  const allJobs: { edges: Job[] } = await getAllJobs();
+
+  const pages: SitemapageItem[] = [
+    {
+      url: "/",
+      priority: 1,
+      de: "/de",
+      en: "/en",
+      bs: "/bs",
+    },
+  ];
+
+  Object.keys(routes).forEach((route) => {
+    const item: {
+      de: string;
+      en: string;
+      bs: string;
+    } = (routes as any)[route];
+    pages.push({
+      url: "/" + item.de,
+      priority: 0.8,
+      de: "/de/" + item.de,
+      en: `/en/${item.en}`,
+      bs: `/bs/${item.bs}`,
+    });
+  });
+
+  allPosts.edges.forEach((post) => {
+    pages.push({
+      url: `/news/${post.node.slug}`,
+      priority: 0.8,
+    });
+  });
+
+  allJobs.edges.forEach((job) => {
+    pages.push({
+      url: `/karriere/${job.node.slug}`,
+      priority: 0.8,
+    });
+  });
+
+  const sitemap = generateSiteMap(pages);
+
+  return new NextResponse(sitemap, {
+    headers: {
+      "Content-Type": "application/xml",
+    },
+  });
+}
+

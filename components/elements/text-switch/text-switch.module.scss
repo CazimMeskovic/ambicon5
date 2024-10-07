@@ -1,0 +1,26 @@
+
+.container {
+	display: grid;
+	grid-template-columns: 70px auto;
+}
+ 
+.text {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 17px;
+	letter-spacing: 0em;
+	text-align: left;
+	padding-bottom: 24px;
+}
+
+.header {
+	padding-top: 4px;
+	padding-bottom: 24px;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+}

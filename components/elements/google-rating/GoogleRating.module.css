@@ -1,0 +1,61 @@
+/* GoogleRating.module.scss */
+.widgetContainer {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  font-family: Arial, sans-serif;
+  max-width: 220px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.ratingContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 13px;
+  color: #70757a;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.ratingAndStars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ratingValue {
+  font-size: 30px;
+  color: #202124;
+  font-weight: bold;
+  margin-right: 1px;
+}
+
+.starsAndReviewCount {
+  display: flex;
+  flex-direction: column;
+}
+
+.stars {
+  color: #f4b400;
+  font-size: 8px;
+  line-height: 1;
+  margin-bottom: -2px;
+}
+
+.reviewCount {
+  font-size: 10px;
+  color: #70757a;
+  align-self: flex-start;
+}

@@ -1,0 +1,17 @@
+.bookingContainer {
+	display: flex;
+}
+
+.bookingDivider {
+	width: 24px;
+}
+
+@media screen and (max-width: 768px) {
+	.bookingContainer {
+		max-width: calc(100vw - 36px);
+	}
+
+	.bookingDivider {
+		width: unset;
+	}
+}

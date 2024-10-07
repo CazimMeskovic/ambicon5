@@ -1,0 +1,181 @@
+.accordion-button {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0;
+    overflow-anchor: none;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        border-radius 0.15s ease, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        border-radius 0.15s ease, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out, border-radius 0.15s ease, -webkit-box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    .accordion-button {
+        -webkit-transition: none;
+        transition: none;
+    }
+}
+.accordion-button.collapsed {
+    border-bottom-width: 0;
+}
+.accordion-button:not(.collapsed) {
+    color: #0c63e4;
+    background-color: #e7f1ff;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.accordion-button::after {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    .accordion-button::after {
+        -webkit-transition: none;
+        transition: none;
+    }
+}
+.accordion-button:hover {
+    z-index: 2;
+}
+
+.accordion-button:focus {
+    z-index: 3;
+}
+.accordion-header {
+    margin-bottom: 0;
+}
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-width: 1px;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.accordion-item:last-of-type .accordion-collapse {
+    border-bottom-width: 1px;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.accordion-collapse {
+    border: solid rgba(0, 0, 0, 0.125);
+    border-width: 0 1px;
+}
+.accordion-body {
+    padding: 1rem 1.25rem;
+}
+.accordion-flush .accordion-button {
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+}
+.accordion-flush .accordion-collapse {
+    border-width: 0;
+}
+.accordion-flush .accordion-item:first-of-type .accordion-button {
+    border-top-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.accordion-flush .accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-width: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.accordion-button:not(.collapsed) {
+    color: #667085;
+    background-color: #e4e7ec;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+}
+.accordion-button::after {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5LjA2MTEgNy44NTM5OUMxOC45MjE4IDcuNzE0NiAxOC43NTY0IDcuNjA0MDIgMTguNTc0NCA3LjUyODU4QzE4LjM5MjMgNy40NTMxNCAxOC4xOTcyIDcuNDE0MzEgMTguMDAwMSA3LjQxNDMxQzE3LjgwMzEgNy40MTQzMSAxNy42MDc5IDcuNDUzMTQgMTcuNDI1OSA3LjUyODU4QzE3LjI0MzggNy42MDQwMiAxNy4wNzg0IDcuNzE0NiAxNi45MzkxIDcuODUzOTlMMTIuMzUzMSAxMi40MzlDMTIuMjU5NCAxMi41MzI3IDEyLjEzMjIgMTIuNTg1NCAxMS45OTk2IDEyLjU4NTRDMTEuODY3MSAxMi41ODU0IDExLjczOTkgMTIuNTMyNyAxMS42NDYxIDEyLjQzOUw3LjA2MTEzIDcuODUzOTlDNi43Nzk4NyA3LjU3MjU5IDYuMzk4MzQgNy40MTQ0NSA2LjAwMDQ4IDcuNDE0MzZDNS42MDI2MiA3LjQxNDI3IDUuMjIxMDIgNy41NzIyMiA0LjkzOTYzIDcuODUzNDlDNC42NTgyMyA4LjEzNDc1IDQuNTAwMDkgOC41MTYyNyA0LjUgOC45MTQxM0M0LjQ5OTkxIDkuMzExOTkgNC42NTc4NyA5LjY5MzU5IDQuOTM5MTMgOS45NzQ5OUw5LjUyNTEzIDE0LjU2MUM5Ljg1MDE0IDE0Ljg4NiAxMC4yMzYgMTUuMTQzOSAxMC42NjA3IDE1LjMxOThDMTEuMDg1MyAxNS40OTU3IDExLjU0MDUgMTUuNTg2MiAxMi4wMDAxIDE1LjU4NjJDMTIuNDU5OCAxNS41ODYyIDEyLjkxNDkgMTUuNDk1NyAxMy4zMzk2IDE1LjMxOThDMTMuNzY0MyAxNS4xNDM5IDE0LjE1MDEgMTQuODg2IDE0LjQ3NTEgMTQuNTYxTDE5LjA2MTEgOS45NzQ5OUMxOS4zNDIzIDkuNjkzNyAxOS41MDAzIDkuMzEyMjMgMTkuNTAwMyA4LjkxNDQ5QzE5LjUwMDMgOC41MTY3NCAxOS4zNDIzIDguMTM1MjggMTkuMDYxMSA3Ljg1Mzk5WiIgZmlsbD0iIzY2NzA4NSIvPgo8L3N2Zz4K);
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE5LjA2MTEgMTYuMTQ2QzE4LjkyMTggMTYuMjg1NCAxOC43NTY0IDE2LjM5NiAxOC41NzQ0IDE2LjQ3MTRDMTguMzkyMyAxNi41NDY5IDE4LjE5NzIgMTYuNTg1NyAxOC4wMDAxIDE2LjU4NTdDMTcuODAzMSAxNi41ODU3IDE3LjYwNzkgMTYuNTQ2OSAxNy40MjU5IDE2LjQ3MTRDMTcuMjQzOCAxNi4zOTYgMTcuMDc4NCAxNi4yODU0IDE2LjkzOTEgMTYuMTQ2TDEyLjM1MzEgMTEuNTYxQzEyLjI1OTQgMTEuNDY3MyAxMi4xMzIyIDExLjQxNDYgMTEuOTk5NiAxMS40MTQ2QzExLjg2NzEgMTEuNDE0NiAxMS43Mzk5IDExLjQ2NzMgMTEuNjQ2MSAxMS41NjFMNy4wNjExMyAxNi4xNDZDNi43Nzk4NyAxNi40Mjc0IDYuMzk4MzQgMTYuNTg1NSA2LjAwMDQ4IDE2LjU4NTZDNS42MDI2MiAxNi41ODU3IDUuMjIxMDIgMTYuNDI3OCA0LjkzOTYzIDE2LjE0NjVDNC42NTgyMyAxNS44NjUzIDQuNTAwMDkgMTUuNDgzNyA0LjUgMTUuMDg1OUM0LjQ5OTkxIDE0LjY4OCA0LjY1Nzg3IDE0LjMwNjQgNC45MzkxMyAxNC4wMjVMOS41MjUxMyA5LjQzOTAxQzkuODUwMTQgOS4xMTM5NyAxMC4yMzYgOC44NTYxMyAxMC42NjA3IDguNjgwMjJDMTEuMDg1MyA4LjUwNDMgMTEuNTQwNSA4LjQxMzc2IDEyLjAwMDEgOC40MTM3NkMxMi40NTk4IDguNDEzNzYgMTIuOTE0OSA4LjUwNDMgMTMuMzM5NiA4LjY4MDIyQzEzLjc2NDMgOC44NTYxMyAxNC4xNTAxIDkuMTEzOTcgMTQuNDc1MSA5LjQzOTAxTDE5LjA2MTEgMTQuMDI1QzE5LjM0MjMgMTQuMzA2MyAxOS41MDAzIDE0LjY4NzggMTkuNTAwMyAxNS4wODU1QzE5LjUwMDMgMTUuNDgzMyAxOS4zNDIzIDE1Ljg2NDcgMTkuMDYxMSAxNi4xNDZaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.accordion .accordion-item {
+    margin-bottom: 25px;
+}
+.accordion .accordion-item .accordion-header {
+    line-height: 22px;
+}
+.accordion .accordion-item .accordion-collapse {
+    border-width: 0;
+}
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+.dropdown .dropdown-menu.show {
+    border: thin solid #ececec;
+    -webkit-box-shadow: 0px 9px 26px 0px rgba(31, 31, 51, 0.06);
+    box-shadow: 0px 9px 26px 0px rgba(31, 31, 51, 0.06);
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 0;
+}
+.dropdown .dropdown-menu.show .dropdown-item {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+.dropdown .dropdown-menu.show .dropdown-item.active {
+    color: #006d77;
+    text-decoration: none;
+    background-color: #afeae4;
+}
+.accordion-body {
+    padding: 15px;
+    background-color: #fff;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+.accordion-body.show {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+}
+.accordion-item.active {
+    background-color: #333;
+}
+.accordion-item.active .accordion-button {
+    color: #fff;
+    background-color: #333;
+    border-radius: 0.5rem;
+}
